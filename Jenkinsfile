@@ -27,6 +27,7 @@ pipeline {
         }
     }
 }
+    }
         stage('Read Package.json') {
             steps {
                 script {
@@ -37,6 +38,7 @@ pipeline {
     }
         
     }
+    
 
     post { 
         always { 
