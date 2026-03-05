@@ -27,8 +27,7 @@ pipeline {
         }
     }
 }
-    }
-        stage('Read Package.json') {
+        stage('install dependencies') {
             steps {
                 script {
                     sh """
@@ -37,6 +36,7 @@ pipeline {
         }
     }
         
+    }
     }
     
 
@@ -53,6 +53,7 @@ pipeline {
         }
     }
 }
+
 
 
 
