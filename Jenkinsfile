@@ -24,7 +24,8 @@ pipeline {
                     def packageJson = readJSON file: 'package.json'
                     appVersion = packageJson.version
                     echo "package version: ${env.appVersion}"
-        }
+            }
+         }
     }
 }
         stage('install dependencies') {
@@ -37,7 +38,7 @@ pipeline {
     }
         
 }
-    stage('Docker build') {
+        stage('Docker build') {
             steps {
                 script {
                     withAWS(credentials: 'aws-creds', region: 'us-east-1'){
